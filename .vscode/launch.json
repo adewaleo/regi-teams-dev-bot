@@ -2,17 +2,18 @@
     "version": "1.0.0",
     "configurations": [
         {
-            "name": "Debug (Development)",
-            "type": "node",
+            "name": "Debug (Teams Web Client)",
+            "type": "chrome",
             "request": "launch",
-            "stopOnEntry": false,
-            "windows": {
-                "preLaunchTask": "debugTeamsWindows"
-            },
-            "osx": {
-                "preLaunchTask": "debugTeamsOSX"
-            },
-            "sourceMaps": false
+            "url": "https://teams.microsoft.com/_#/l/app/bf21b162-e526-4dfc-b06f-8187e250830a?installAppPackage=true",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug (Chrome)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "https://localhost:3000/tab",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
